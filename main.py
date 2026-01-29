@@ -36,11 +36,12 @@ class GlobalBank:
 
 
 def main():
-    global_bank = GlobalBank()
-    global_bank.create_bank("attijari", 2000000000, "morocco", "MAD")
-    global_bank.create_bank("CDM", 20000000, "morocco", "MAD")
-    global_bank.create_bank("test", 20000, "morocco", "MAD")
-    global_bank.create_bank("attijari", 2000000000, "morocco", "MAD")
+    # IGNORE FOR NOW THIS IS FOR TESTING
+    # global_bank = GlobalBank()
+    # global_bank.create_bank("attijari", 2000000000, "morocco", "MAD")
+    # global_bank.create_bank("CDM", 20000000, "morocco", "MAD")
+    # global_bank.create_bank("test", 20000, "morocco", "MAD")
+    # global_bank.create_bank("attijari", 2000000000, "morocco", "MAD")
     while True:
         choice = input(
             "=== WELCOME TO GLOBAL BANK ===\n"
