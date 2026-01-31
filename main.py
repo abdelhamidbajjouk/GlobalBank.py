@@ -55,17 +55,21 @@ def create_bank(bank_instance: GlobalBank):
     bank_instance.create_bank(bank_name, bank_country, bank_currency, bank_capital)
 
 
-def list_banks(country: str):
+def list_banks():
     print("=== LISTING BANKS ===")
-    with open("db.txt", "r") as db_file:
-        data = json.load(db_file)
-    for key, banks in data['countries'].items():
-        for bnk in banks:
-            print(f"Bank's Name: {bnk.get('name')}")
-            print(f"Bank's Capital: {int(bnk.get('capital')):,.2f}") # I KNOW THIS STUPID TO DO IN ONE LINE BUT ANYWAY
-            print(f"Bank's Currency: {bnk.get('currency')}")
-            print(f"Bank's Country: {key.capitalize()}")
-            print("=========================================")
+    try:
+        with open("db.txt", "r") as db_file:
+            data = json.load(db_file)
+    
+        for key, banks in data['countries'].items():
+            for bnk in banks:
+                print(f"Bank's Name: {bnk.get('name')}")
+                print(f"Bank's Capital: {int(bnk.get('capital')):,.2f}") # I KNOW THIS STUPID TO DO IN ONE LINE BUT ANYWAY
+                print(f"Bank's Currency: {bnk.get('currency')}")
+                print(f"Bank's Country: {key.capitalize()}")
+                print("=========================================")
+    except Exception:
+        print("NO BANKS ARE STORED PLEASE CREATE THEM FIRST")
 
 
 def main():
