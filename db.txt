@@ -1,0 +1,16 @@
+{
+    "countries": {
+        "morocco": [
+            {
+                "name": "test",
+                "capital": "100000",
+                "currency": "MAD"
+            },
+            {
+                "name": "hello",
+                "capital": "100000",
+                "currency": "MAD"
+            }
+        ]
+    }
+}
