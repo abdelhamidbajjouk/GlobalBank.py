@@ -60,7 +60,7 @@ def list_banks():
     try:
         with open("db.txt", "r") as db_file:
             data = json.load(db_file)
-    
+
         for key, banks in data['countries'].items():
             for bnk in banks:
                 print(f"Bank's Name: {bnk.get('name')}")
@@ -100,9 +100,6 @@ def main():
             print("LEAVING GLOBAL BANK DASHBOARD")
             break
 
+
 if __name__ == "__main__":
-    try:
-        main()
-    except BaseException:
-        print("\n!!!PROGRAM EXITED!!!")
-        
+    main()
